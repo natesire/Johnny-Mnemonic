@@ -6,13 +6,11 @@ Example of code that helps print out all the functions for a JS Array. This help
 
 ```
 Ray("at", ["at"], 9725);
-Ray("flat", ["flat", "map", "flatMap"], function(easy) { easy });
-Ray("forEach2", ["forEach", "find", "filter"],      function(worry) { return worry + 1; });
-Ray("pop", ["pop", "slice", "splice"],      function(worry) { return worry + 1; });
-Ray("push", ["push", "unshift", "concat"],      function(worry) { return worry + 1; });
-Ray("shift", ["shift", "reduce", "reduceRight"],      function(worry) { return worry + 1; });
-Ray("some", ["some", "includes", "every"],      function(worry) { return worry + 1; });
-Ray("sort", ["sort", "fill", "every"],      function(worry) { return worry + 1; });
-Ray("toString2", ["toLocaleString", "join", "toString"],      function(worry) { return worry + 1; });
-Ray("values2", ["values", "entries", "keys"],      function(worry) { return worry + 1; });
+Ray("flat", ["flat", "map", "flatMap"],                             function(treasure)      { treasure });
+Ray("forEach2", ["forEach", "find", "filter"],                      function(lightSaber)    { lightSaber });
+Ray("indexOf", ["indexOf", "lastIndexOf", "findIndex"],             function(finger)        { finger});
 ```
+
+1. Group each function into its use with a name
+
+2. Use an obvious mnemonic keyword

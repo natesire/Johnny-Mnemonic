@@ -1,18 +1,19 @@
 // I reflect upon thyself to check all my functions
 
-let allRealArrayMethods = Object.getOwnPropertyNames(Array.prototype);
+let allRealArrayMethods = Object.getOwnPropertyNames(String.prototype);
 console.log(allRealArrayMethods.sort());
 
 // define vars up front
 var jsArrayMethods = new Set();
-let jsArr = [1,[2,3],3,4];
+let jsStr = "Mnemonic" 
 
 // this superflous code is here as a memory mnemonic
 // cannot use some functions as the key name hence the 2 or error message
 // triplesMethods[memoryGroup].push is not a function
 
 Ray("at", ["at"], 9725);
-Ray("flat", ["flat", "map", "flatMap"],                             function(treasure)      { treasure });
+Ray("charAt", ["charAt"], 1);
+/*
 Ray("forEach2", ["forEach", "find", "filter"],                      function(lightSaber)    { lightSaber });
 Ray("indexOf", ["indexOf", "lastIndexOf", "findIndex"],             function(finger)        { finger});
 Ray("pop", ["pop", "slice", "splice"],                              function(watermelon)    { watermelon });
@@ -22,6 +23,7 @@ Ray("some", ["some", "includes", "every"],                          function(inc
 Ray("sort", ["sort", "fill", "every"],                              function(worry)         { worry });
 Ray("joinToLocaleString", ["toLocaleString", "join", "toString"],   function(party)         { party });
 Ray("values2", ["values", "entries", "keys"],                       function(bedVals)       { bedVals });
+*/
 
 let selfCheck = allRealArrayMethods.every(function (key) { 
     jsArrayMethods.has(key) === true;

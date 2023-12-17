@@ -12,15 +12,16 @@ let jsArr = [1,[2,3],3,4];
 // triplesMethods[memoryGroup].push is not a function
 
 Ray("at", ["at"], 9725);
-Ray("flat", ["flat", "map", "flatMap"], function(easy) { easy });
-Ray("forEach2", ["forEach", "find", "filter"],      function(worry) { return worry + 1; });
-Ray("pop", ["pop", "slice", "splice"],      function(worry) { return worry + 1; });
-Ray("push", ["push", "unshift", "concat"],      function(worry) { return worry + 1; });
-Ray("shift", ["shift", "reduce", "reduceRight"],      function(worry) { return worry + 1; });
-Ray("some", ["some", "includes", "every"],      function(worry) { return worry + 1; });
-Ray("sort", ["sort", "fill", "every"],      function(worry) { return worry + 1; });
-Ray("toString2", ["toLocaleString", "join", "toString"],      function(worry) { return worry + 1; });
-Ray("values2", ["values", "entries", "keys"],      function(worry) { return worry + 1; });
+Ray("flat", ["flat", "map", "flatMap"],                 function(treasure)      { treasure });
+Ray("forEach2", ["forEach", "find", "filter"],          function(lightSaber)    { lightSaber });
+Ray("indexOf", ["indexOf", "lastIndexOf", "findIndex"], function(finger)        { finger});
+Ray("pop", ["pop", "slice", "splice"],                  function(watermelon)    { watermelon });
+Ray("push", ["push", "unshift", "concat"],              function(kitty)         { kitty });
+Ray("shift", ["shift", "reduce", "reduceRight"],        function(speed)         { speed });
+Ray("some", ["some", "includes", "every"],              function(inclusive)     { inclusive });
+Ray("sort", ["sort", "fill", "every"],                  function(worry) { return worry + 1; });
+Ray("toString2", ["toLocaleString", "join", "toString"],function(worry) { return worry + 1; });
+Ray("values2", ["values", "entries", "keys"],           function(worry) { return worry + 1; });
 
 let selfCheck = allRealArrayMethods.every(function (key) { 
     jsArrayMethods.has(key) === true;

@@ -1,53 +1,46 @@
-let allMethods = Object.getOwnPropertyNames(Array.prototype);
-console.log(allMethods.sort());
+// I reflect upon thyself to check all my functions
 
-var triplesMethods = {};
+let allRealArrayMethods = Object.getOwnPropertyNames(Array.prototype);
+console.log(allRealArrayMethods.sort());
 
+// define vars up front
+var jsArrayMethods = new Set();
 let jsArr = [1,[2,3],3,4];
 
-function ray(memoryGroup, callFunc, arg1, arg2) {
-    try {
-      triplesMethods[memoryGroup] || (triplesMethods[memoryGroup] = new Array());
-      triplesMethods[memoryGroup].push(callFunc);
-      jsArr[callFunc](arg1);
-    } catch (e) {
-      console.log(memoryGroup, callFunc, arg1, e.message);
-    }
+// this superflous code is here as a memory mnemonic
+// cannot use some functions as the key name hence the 2 or error message
+// triplesMethods[memoryGroup].push is not a function
+
+Ray("at", ["at"], 9725);
+Ray("flat", ["flat", "map", "flatMap"], function(easy) { easy });
+Ray("forEach2", ["forEach", "find", "filter"],      function(worry) { return worry + 1; });
+Ray("pop", ["pop", "slice", "splice"],      function(worry) { return worry + 1; });
+Ray("push", ["push", "unshift", "concat"],      function(worry) { return worry + 1; });
+Ray("shift", ["shift", "reduce", "reduceRight"],      function(worry) { return worry + 1; });
+Ray("some", ["some", "includes", "every"],      function(worry) { return worry + 1; });
+Ray("sort", ["sort", "fill", "every"],      function(worry) { return worry + 1; });
+Ray("toString2", ["toLocaleString", "join", "toString"],      function(worry) { return worry + 1; });
+Ray("values2", ["values", "entries", "keys"],      function(worry) { return worry + 1; });
+
+let selfCheck = allRealArrayMethods.every(function (key) { 
+    jsArrayMethods.has(key) === true;
+});
+
+console.log("did I try calling all possible functions: " + selfCheck);
+
+// JS allows you to define a function at the end (hoisting)
+function Ray(memoryGroup, func, arg1) {
+    func.forEach((fun) => {
+        try {
+            jsArrayMethods[memoryGroup] || (jsArrayMethods[memoryGroup] = new Array());
+            jsArrayMethods[memoryGroup].push(func);
+            jsArr[fun](arg1);
+            } catch (error) {
+            verboseError(memoryGroup, func, arg1, error);
+        }
+    });
 }
 
-ray("at", "at", 9725);
-ray("flat", "flat");
-ray("flat", "map", function() { 1 });
-ray("flat", "flatMap", function(item) { return item + 1; });
-ray("forEach", "forEach", function(item) { return item + 1; });
-ray("forEach", "find", function(item) { item === 3 });
-ray("forEach", "filter", function(item) { item === 3 });
-ray("pop", "pop", function(item) { item === 3 });
-ray("pop", "splice", function(item) { item === 3 });
-ray("pop", "slice", function(item) { item === 3 });
-ray("push", "push", function(item) { item === 3 });
-ray("push", "unshift", function(item) { item === 3 });
-ray("push", "concat", function(cat) { cat === 3 });
-ray("shift", "shift", function(item) { item === 3 });
-ray("shift", "reduce", function(cats) { cats === 3 });
-ray("shift", "reduceRight", function(item) { item === 3 });
-ray("some", "some", function(get) { get === 3 });
-ray("some", "includes", function(nude) { nude === 3 });
-ray("some", "every", function(every) { every === 3 });
-ray("sort", "fill", function(every) { every === 3 }); //most difficult to remember goes first
-ray("sort", "reverse", function(every) { every === 3 });
-ray("sort", "sort", function(every) { every === 3 }); // easiest to remember goes last
-
-// cannot use toString as the key name
-// triplesMethods[memoryGroup].push is not a function
-ray("toString2", "toLocaleString", function(every) { every === 3 }); // easiest to remember goes last
-ray("toString2", "join", function(every) { every === 3 }); // easiest to remember goes last
-ray("toString2", "toString"); // easiest to remember goes last
-
-ray("values", "values", function(every) { every === 3 }); // easiest to remember goes last
-ray("values", "entries", function(every) { every === 3 }); // easiest to remember goes last
-ray("values", "keys", function(every) { every === 3 }); // easiest to remember goes last
-
-Object.keys(triplesMethods).forEach(function (key) { 
-    console.log(key, triplesMethods[key]);
-});
+function verboseError(memoryGroup, func, arg1, e) {
+    console.log("memory group:" + memoryGroup, "function: " + func, "arg1: " + arg1, "error msg: " + e.message);
+}

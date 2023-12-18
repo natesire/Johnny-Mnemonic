@@ -21,3 +21,9 @@ Ray("values2", ["values", "entries", "keys"],                       function(bed
 1. Group each function into its use with a name
 
 2. Use an obvious mnemonic keyword
+
+Additional Inspiration and Resources
+
+Jordan Harb (Leader in NodeJS and Open Source) came up with an approach on how to categorize mutating methods versys non-mutating which relates to JS's ability to be a great functional programming language as in the style "functional programming".
+
+https://gist.github.com/ljharb/58faf1cfcb4e6808f74aae4ef7944cff

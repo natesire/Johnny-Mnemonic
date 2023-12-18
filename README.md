@@ -18,11 +18,7 @@ Ray("joinToLocaleString", ["toLocaleString", "join", "toString"],   function(par
 Ray("values2", ["values", "entries", "keys"],                       function(bedVals)       { bedVals });
 ```
 
-1. Group each function into its use with a name
-
-2. Use an obvious mnemonic keyword
-
-Additional Inspiration and Resources
+# Additional Inspiration and Resources
 
 [Jordan Harb](https://gist.github.com/ljharb) (Leader in NodeJS and Open Source) came up with an approach on how to categorize mutating methods versus non-mutating which relates to JS's ability to be a great functional programming language as in the style "functional programming".
 

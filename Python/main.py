@@ -1,8 +1,8 @@
 def Str(str, call, arg = None):
-    if arg: 
-        print(getattr(str, call)(arg))
-    else:
-        print(getattr(str, call)())
+    try:
+        print(getattr(str, call)(arg)) or print(getattr(str, call)())
+    except:
+        print("error calling function: " + call)
 
 str = "Hello MyPy"
 funcs = dir(str)

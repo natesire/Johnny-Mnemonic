@@ -1,5 +1,5 @@
 
-class Mypi:
+class Mypy:
     def __init__(self):
         self.name = "MyPi"
         self.age = 20
@@ -21,7 +21,7 @@ str = "Hello MyPi"
 dir(str)
 
 # instantiate class
-mipi = Mypi()
+mipi = Mypy()
 
 print(dir(mipi))
 

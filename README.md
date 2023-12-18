@@ -26,4 +26,6 @@ Additional Inspiration and Resources
 
 Jordan Harb (Leader in NodeJS and Open Source) came up with an approach on how to categorize mutating methods versys non-mutating which relates to JS's ability to be a great functional programming language as in the style "functional programming".
 
+https://gist.github.com/ljharb
+
 https://gist.github.com/ljharb/58faf1cfcb4e6808f74aae4ef7944cff

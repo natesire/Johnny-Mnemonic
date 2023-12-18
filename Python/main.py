@@ -1,5 +1,5 @@
 
-class Mipi:
+class Mypi:
     def __init__(self):
         self.name = "MyPi"
         self.age = 20
@@ -21,10 +21,14 @@ str = "Hello MyPi"
 dir(str)
 
 # instantiate class
-mipi = Mipi()
+mipi = Mypi()
 
 print(dir(mipi))
 
 # Haiku
 Str("haiku", { "name": [ "title", "capitalize" ] })
 Str("haiku", "capitalize")
+
+# random number
+import random
+print(random.randint(1, 100))
